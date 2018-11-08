@@ -1,0 +1,536 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'VinciDingbats';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_dingbats.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.svg#vinci_dingbats') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_dingbats.eot')
+}
+
+@font-face {
+    font-family: 'VinciSansBold';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.svg#vinci_sans_bold') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_bold.eot')
+}
+
+@font-face {
+    font-family: 'VinciSansRegular';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.svg#vinci_sans_regular') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_regular.eot')
+}
+
+@font-face {
+    font-family: 'VinciCondensedMedium';
+    src: url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff2') format('woff2'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.woff') format('woff'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.svg#vinci_sans_condensed-medium') format('svg'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.ttf') format('truetype'), url('https://www.vinci.com/publi/webfonts/vinci_sans_condensed-medium.eot')
+}
+
+/***** IMPORT SCSS   ****/
+
+body {
+    margin: 0;
+}
+
+.ais-InstantSearch__root {
+    font-family: VinciSansBold,"Trebuchet MS",Arial,Helvetica,sans-serif !important;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+em {
+    background: #bccef7;
+    font-style: normal;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+}
+
+.result {
+    padding: 20px;
+    font-size: .95em;
+    margin-top: 35px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.results {
+    display: flex;
+}
+
+.refinements {
+    width: 200px;
+    margin-right: 50px;
+}
+
+.items {
+    max-width: 830px;
+}
+
+.header-search {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1090px;
+}
+
+.ais-Panel__root {
+    clear: both;
+}
+
+.ais-Panel__root:first-child h5 {
+    margin-top: 0;
+}
+
+.ais-Panel__root + .ais-Panel__root {
+    padding-top: 10px;
+}
+
+h5 {
+    font-size: 16px;
+    color: #1f4f92;
+    margin-bottom: 15px;
+}
+
+.ais-Menu__item {
+    font-size: 16px;
+}
+
+.ais-Menu__itemLabel, .ais-RefinementList__item {
+    color: #333;
+}
+
+.ais-Menu__itemCount, .ais-RefinementList__itemCount {
+    background-color: rgba(136, 136, 136, 0.1);
+    color: #55606e;
+}
+
+.ais-Hits__root {
+    clear: both;
+}
+
+.pdf-section .ais-Hits__root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    padding: 50px 0 0 0px;
+}
+
+.pdf-hit {
+    padding: 20px;
+    background-color: rgba(31, 79, 146, 0.09);
+
+}
+
+.pdf-hit__content {
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.pdf-hit__title {
+    width: 365px;
+    font-size: .9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.logo {
+    background-image: url('https://www.vinci.com/vinci.nsf/en/images/$file/logo-vinci.png');
+    width: 250px;
+    height: 70px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.separator {
+    height: 2px;
+    width: 100%;
+    background-color: #1f4f92;
+    margin-bottom: 50px;
+}
+
+.ais-SearchBox__root {
+   /* max-width: 835px;  */
+}
+
+.stats-wrapper {
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+
+em.ais-Highlight-highlighted {
+    color: #0000cc;
+    background: none !important;
+    font-weight:bold;
+}
+
+em.ais-Snippet-highlighted{
+    color: black;
+    background: none !important;
+    font-weight:bold;
+}
+
+.icon {
+    margin-bottom: 5px;
+}
+
+.ais-Pagination__root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.ais-Menu-count {
+    background-color:transparent;
+    font-size: 18px;
+    color: #777;
+}
+
+
+/**************/
+
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%
+}
+
+body,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body, td, div, .p, a, .d, .s {
+    font-family: 'VinciSansRegular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+a:visited, .f a:visited {
+    color: #551a8b;
+}
+
+a:link, .w, .w a:link {
+    color: #004489;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #333;
+}
+
+h1 {
+    width: 100%;
+    font-size: 3.125rem;
+}
+
+h1, h2, .ariane {
+    font-family: VinciCondensedMedium, "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+main .text {
+    padding: 0;
+}
+
+.text {
+    width: 100%;
+    font-size: 1.125rem;
+    text-align: left;
+}
+
+.content {
+    width: 100%;
+    color: #333;
+}
+
+.ariane {
+    padding-bottom: 5px !important;
+    font-size: 1rem;
+}
+
+.header_text * {
+    color: #fff;
+    text-align: left;
+    margin: 0 auto;
+    padding:0 20px;
+}
+
+.header_text_00 {
+    background: linear-gradient(to right, rgba(0, 68, 137, 1) 0%, rgba(0, 68, 137, 0.6) 100%);
+}
+
+.header_text {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 20px 0;
+    min-height: 87px;
+}
+
+li {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+.header-all-categories {
+    color: #fff;
+    background: #3C3C3B !important;
+    font-size: 1rem !important;
+    font-family: VinciSansBold !important;
+    font-weight: normal !important;
+}
+
+.fake-column {
+    min-width: 221px;
+}
+
+.fake-column > span {
+    padding-left: 3px;
+}
+
+.fake-column > ul > li {
+    padding-left: 16px;
+}
+
+div#dyn_nav {
+    background: #FFF none repeat scroll 0 0;
+    padding-top: 1px;
+    top: 0;
+    width: 100% !important;
+    margin: 1% 0 !important;
+    border: none 0 !important;
+}
+
+main {
+    padding-top: 0px
+}
+
+span.showMore-count-customized {
+    color: #3C3C3B;
+}
+
+.pdf-icon {
+    background: url(../ico-pdf.png) no-repeat scroll right center;
+    padding-left: 16px;
+    margin-right: 0.5em;
+}
+
+footer {
+    background: #ededed;
+    color: #3c3c3c;
+    margin-bottom: 1em;
+    clear: both;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.bourse {
+    width: auto;
+    font-family: VinciSansBold;
+    padding: 0 2rem 0 20px;
+    padding-left: 20px;
+    color: #3C3C3B;
+    text-align: left;
+    clear: both;
+}
+
+
+.dn-attr-hdr-txt {
+    line-height: 1.5em;
+}
+
+.dn-attr-hdr-txt {
+    width: auto;
+    font-family: "VinciSansBold" !important;
+    font-weight: normal !important;
+}
+
+.dn-attr-hdr-txt {
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+.dn-attr-v {
+    line-height: 1.1em !important;
+    overflow-x: hidden;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+#dyn_nav li a:hover {
+    text-decoration: underline;
+}
+
+#dyn_nav li a {
+    color: #3C3C3B !important;
+    font-size: 0.917rem !important;
+    cursor:pointer;
+}
+
+.text a:hover {
+    transition: 0.5s;
+}
+
+/*** CSS Flexbox ****/
+
+li.header-category {
+    font-family: 'VinciSansBold' !important;
+    font-weight: normal !important;
+    font-size: 18px;
+    outline-style: none;
+    padding: 6px 10px !important;
+    line-height: 1.5em !important;
+    color: #000000;
+    background: #EDEDED !important;
+}
+
+.width15 {
+    width: calc(15% - 10px);
+}
+
+.flexcontainer-as-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexcontainer-as-row > div {
+    height: -webkit-calc(99% - 10px); /* pour Chrome */
+    height: -moz-calc(99% - 10px); /* pour Firefox */
+    height: calc(99% - 10px);
+    max-width: -webkit-calc(95% - 10px); /* pour Chrome */
+    max-width: -moz-calc(95% - 10px); /* pour Firefox */
+    max-width: calc(95% - 10px);
+    background-color: white;
+}
+
+.flexcontainer-as-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 460px;
+    margin: 1rem 0 0;
+}
+
+.flexcontainer-as-row-reverse > div {
+    height: -webkit-calc(99% - 10px); /* pour Chrome */
+    height: -moz-calc(99% - 10px); /* pour Firefox */
+    height: calc(99% - 10px);
+    max-width: -webkit-calc(95% - 10px); /* pour Chrome */
+    max-width: -moz-calc(95% - 10px); /* pour Firefox */
+    max-width: calc(95% - 10px);
+    background-color: white;
+    margin: 3px;
+}
+
+.flexcontainer-as-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexcontainer-as-column > div {
+    height: -webkit-calc(99% - 10px); /* pour Chrome */
+    height: -moz-calc(99% - 10px); /* pour Firefox */
+    height: calc(99% - 10px);
+    background-color: white;
+}
+
+.align-center {
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.bigitem {
+    -webkit-flex: 2 0 0;
+    flex: 2 0 0;
+}
+
+li.showMore-customized {
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+}
+
+div.display-searchable {
+    background: url(https://www.vinci.com/search/images/ic_search.png) no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 12px;
+    width: 10px;
+}
+
+.fontsize18 {
+    font-size: 18px;
+}
+
+.flex-end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+strong, b, span.b a, .n span.i, .n td a, li.dn-attr-hdr {
+    font-family: 'VinciSansBold' !important;
+    font-weight: normal !important;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    z-index: 9999;
+    width: 51px;
+    height: 51px;
+    text-align: center;
+    line-height: 30px;
+    background: url(../ui.totop.png) no-repeat left top;
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+#back-to-top:hover {
+    background: url(../ui.totop.png) no-repeat left -51px;
+    width: 51px;
+    height: 51px;
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+.document-date {
+    font-size: small;
+}
+
+#NoResultsBlock {
+    padding-bottom: 1.5rem;
+    font-size: 1.125rem;
+    text-align: left;
+    color: #000000;
+}
+

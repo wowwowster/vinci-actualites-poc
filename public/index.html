@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="public/manifest.json">
+    <link rel="icon" href="https://www.vinci.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.vinci.com/favicon.ico" type="image/x-icon">
+
+    <!--
+      Do not use @7 in production, use a complete version like x.x.x, see website for latest version:
+      https://community.algolia.com/react-instantsearch/Getting_started.html#load-the-algolia-theme
+    -->
+    <link rel="stylesheet" href="public/resources/css/commun.8.2018.018.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
+    <link rel="stylesheet" href="public/resources/css/index.css">
+    <link rel="stylesheet" href="public/resources/css/flexbox.css">
+    <link rel="stylesheet" href="public/resources/css/css-for-desktop.css">
+    <link rel="stylesheet" href="public/resources/css/css-for-mobile.css">
+    <link rel="stylesheet" href="public/resources/css/algolia-customized.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script src="public/resources/js/jquery-1.11.0.min.js" crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function(){
+
+            if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 100);
+            });
+        }
+
+        });
+    </script>
+    <title>Rechercher</title>
+    <style type="text/css">.js .nav-collapse-0.opened{max-height:96px !important} .js .nav-collapse-0.opened.dropdown-active {max-height:9999px !important}</style>
+</head>
+
+<body>
+<header>
+    <div class="logo-mobile">
+        <a href="https://www.vinci.com/vinci.nsf/fr/index.htm"><img
+            src="https://www.vinci.com/vinci.nsf/fr/images/$file/logo-vinci.png" alt="VINCI"
+            width="166" height="60"></a>
+    </div>
+    <a href="#" class="nav-toggle" aria-hidden="false">Menu</a>
+
+    <nav class="navbar navbar-default navbar-fixed-top nav-collapse nav-collapse nav-collapse-0 closed" aria-hidden="false" style="transition: max-height 284ms ease 0s; position: relative;">
+        <div class="header-wrapper-mobile">
+            <div id="logo-header" className="header-mobile">
+                <div id="logo-desktop">
+                    <a href="https://www.vinci.com/vinci.nsf/fr/index.htm"><img
+                    src="https://www.vinci.com/vinci.nsf/fr/images/$file/logo-vinci.png" alt=""
+                    width="166"
+                    height="60"></a>
+                </div>
+                <div class="bourse bourse_desktop">&nbsp;</div>
+                <div class="langues">&nbsp;</div>
+                <div class="search">&nbsp;</div>
+            </div>
+            <div class="top-menu-bar"></div>
+            <div class="top-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="https://www.vinci.com/vinci.nsf/fr/index.htm"
+                           class="dropdown-toggle dropdown-toggle-00" data-toggle="">Accueil</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main  class="Site-content">
+    <div id="content" >
+        <div class="bourse bourse_mobile">&nbsp;</div>
+        <div class="header_text header_text_00">
+            <div class="ariane"></div>
+            <h1>Rechercher</h1>
+        </div>
+        <div class="flex" >
+            <div id="root" ></div>
+        </div>
+    </div>
+    <a href="#" id="back-to-top" ></a>
+    <footer>&nbsp;</footer>
+</main>
+
+</body>
+
+</html>

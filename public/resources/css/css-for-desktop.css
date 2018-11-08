@@ -1,0 +1,221 @@
+/***** RESPONSIVE   **********/
+
+/**** desktop  ***/
+@media only screen and (min-width: 901px) {
+
+    header {
+        position: fixed;
+        display: block;
+        left: auto;
+        right: auto;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        max-height: 100%;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
+    .nav-toggle {
+        transition: max-height 284ms ease 0s;
+        position: relative;
+        max-height: none;
+    }
+
+    #logo-header {
+        line-height: 1.5em;
+        background: #fff;
+        height: 70px;
+        width: 1200px;
+        margin: auto;
+        text-align: left;
+        font-size: 1.125rem;
+    }
+
+    #logo-header div {
+        display: inline-block;
+        vertical-align: top;
+        height: 70px;
+        line-height: 70px;
+        overflow: hidden;
+    }
+
+    #logo-desktop {
+        float: right;
+        width: 166px;
+        padding: 5px 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: right;
+    }
+
+    .langues, .nav-toggle, .search, .logo-mobile {
+        display: none;
+    }
+
+    .top-menu-bar {
+        border: solid 1px #dfe3e6;
+        height: 45px;
+        background: #ededed
+    }
+
+    .top-menu {
+        width: 100%;
+        margin: -45px auto 0 auto;
+        text-align: left;
+    }
+
+    .top-menu ul {
+        padding: 0;
+        width: 100%;
+        margin: auto;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        font-family: VinciSansBold;
+        background: #ededed;
+        border-top: solid 1px #dfe3e6;
+    }
+
+    .dropdown-toggle {
+        display: block;
+        height: 44px;
+        line-height: 35px;
+        border-top: solid 3px #ededed;
+        border-bottom: solid 1px #dfe3e6;
+        text-decoration: none;
+        font-size: 1.125rem;
+        border-left: solid 1px #ededed;
+        border-right: solid 1px #ededed;
+        padding: 0 2rem;
+    }
+
+    main {
+        padding-top: 99px;
+        margin-top: 1rem;
+    }
+
+    .bourse_mobile {
+        display: none;
+    }
+
+    #container-main-searchbox {
+        margin: 1.2rem 0;
+        align-items: center;
+    }
+
+    #ContainerHitsAndCategories {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #ContainerHitsAndCategories > div {
+        height: -webkit-calc(99% - 10px); /* pour Chrome */
+        height: -moz-calc(99% - 10px); /* pour Firefox */
+        height: calc(99% - 10px);
+        max-width: -webkit-calc(95% - 10px); /* pour Chrome */
+        max-width: -moz-calc(95% - 10px); /* pour Firefox */
+        max-width: calc(95% - 10px);
+        background-color: white;
+    }
+
+    #ContainerCategories {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fake-column {
+        text-align: left;
+        margin-right: 0.8rem;
+        max-width: 221px;
+    }
+
+    .header-all-categories {
+        padding: 4px 6px 4px 10px !important;
+    }
+
+    #magnifier  {
+        margin-left: -3px;
+    }
+
+    #root {
+        margin-top: 0.3em;
+    }
+
+    .ais-Stats-text {
+        padding-left: 16px;
+    }
+
+    @media only screen and (min-width: 1201px) {
+        #NoResultsBlock {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    #root {
+        padding-left: 1.125rem;
+        padding-right: 1.125rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .hits-wrapper {
+        border-left: 1px solid #c6c6c6 !important;
+    }
+
+    ul.one-category {
+        margin: 7px 0 4px 0;
+    }
+
+    #container-stats-sortby {
+        margin: 2.25rem 0 20px 0;
+    }
+
+    .ais-Stats {
+        top: -43px;
+    }
+
+    .ais-Hits-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.3rem;
+        margin-left: 0rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .top-menu {
+        width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 901px) {
+    .top-menu {
+        background: #ededed;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 901px) {
+    .dropdown-toggle {
+        padding: 0 2vw;
+    }
+    .top-menu {
+        background: #ededed;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    #root {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
